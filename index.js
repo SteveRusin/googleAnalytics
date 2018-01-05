@@ -2,13 +2,17 @@ $(document).ready(function () {
 
 
     function sendData(screenName) {
-        ga('set', {
+        // ga('set', {
+        //     dimension1: '1234',
+        //     dimension2: screenName,
+        //     metric1: '12345'
+        // });
+
+        ga('send', 'event', {
             dimension1: '1234',
             dimension2: screenName,
             metric1: '12345'
         });
-
-        ga('send', 'event');
 
         console.log(ga.getAll())
     }
